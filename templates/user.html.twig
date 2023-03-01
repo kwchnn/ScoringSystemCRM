@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block div%}
+    <h1> Hello! </h1>
+        <ul>
+            <li>
+                Ваше имя: {{ users.getFirstName }}
+            </li>
+            <li>
+                Ваша фамилия: {{ users.getLastName }}
+            </li>
+            <li>
+                Ваше образование: {{ users.getEducation }}
+            </li>
+            <li>
+                Ваш email: {{ users.getEmail }}
+            </li>
+            <li>
+                Ваш номер телефона: +7{{ users.getPhone }}
+            </li>
+            <li>
+                Ваше количество очков: {{ users.getScore }}
+            </li>
+        </ul>
+{% endblock %}

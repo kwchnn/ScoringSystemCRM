@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block div%}
+    <div class="form">
+        <form class="register-form" method="post" action="{{ path('register_action') }}">
+{#        <form class="register-form" method="post" action="/register">#}
+            <input type="text" name="first_name" placeholder="Имя"/>
+            <input type="text" name="last_name" placeholder="Фамилия"/>
+            <input type="text" name="email" placeholder="Email адрес"/>
+            <select name="education" style="
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px">
+                <option value="Высшее">Высшее образование</option>
+                <option value="Специальное">Специальное образование</option>
+                <option value="Среднее">Среднее образование</option>
+            </select>
+            <div style="display: flex;"> <span style="margin-top: 5%; padding-right: 2%;">+7</span><input type="text" name="phone_number" placeholder="Номер телефона"/></div>
+            <input type="password" name="password" placeholder="password"/>
+            <p>
+                <input type="hidden" value="0" name="agreement"> <input type="checkbox" name="agreement" value="4"/>
+                Я даю согласие на обработку песональных данных
+            </p>
+                <button>Подтвердить</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+
+    </div>
+{% endblock %}
